@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/location_nav"
+    app:startDestination="@id/selection">
+
+    <fragment
+        android:id="@+id/list_ReportFragment"
+        android:name="com.example.madassignmentproject.List_ReportFragment"
+        android:label="fragment_list_report"
+        tools:layout="@layout/fragment_report__list" >
+        <action
+            android:id="@+id/action_list_ReportFragment_to_add_ReportFragment"
+            app:destination="@id/add_ReportFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/add_ReportFragment"
+        android:name="com.example.madassignmentproject.Add_ReportFragment"
+        android:label="Add_ReportFragment" >
+        <action
+            android:id="@+id/action_add_ReportFragment_to_list_ReportFragment"
+            app:destination="@id/list_ReportFragment" />
+<!--        <action-->
+<!--            android:id="@+id/action_add_ReportFragment_to_selection"-->
+<!--            app:destination="@id/selection" />-->
+    </fragment>
+    <fragment
+        android:id="@+id/selection"
+        android:name="com.example.madassignmentproject.Selection"
+        android:label="Selection" >
+        <action
+            android:id="@+id/action_selection_to_list_ReportFragment"
+            app:destination="@id/list_ReportFragment" />
+        <action
+            android:id="@+id/action_selection_to_add_Recycle_PointFragment"
+            app:destination="@id/add_Recycle_PointFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/add_Recycle_PointFragment"
+        android:name="com.example.madassignmentproject.Add_Recycle_PointFragment"
+        android:label="Add_Recycle_PointFragment" />
+</navigation>
